@@ -1,5 +1,6 @@
+// src/components/LoginForm/LoginForm.js
 import React, { useState } from "react";
-// import styles from './Login.module.css';
+import styles from './LoginForm.module.css'; // Import the CSS module
 
 function LoginForm({ onLogin }) {
   const [email, setEmail] = useState("");
@@ -16,9 +17,9 @@ function LoginForm({ onLogin }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    
+
     // Fetch users from the server
-    fetch("http://localhost:3000/users")
+    fetch("https://json-server-template-5ash.onrender.com/users")
       .then((response) => response.json())
       .then((users) => {
         // Find the user with the entered email and password
@@ -41,9 +42,9 @@ function LoginForm({ onLogin }) {
   }
 
   return (
-    <form className="login-form" onSubmit={handleSubmit}>
+    <form className={styles['login-form']} onSubmit={handleSubmit}>
       <h2>Login</h2>
-      {error && <p className="error">{error}</p>}
+      {error && <p className={styles.error}>{error}</p>}
       <input
         type="email"
         name="email"
@@ -64,9 +65,3 @@ function LoginForm({ onLogin }) {
 }
 
 export default LoginForm;
-
-
-
-
-
-

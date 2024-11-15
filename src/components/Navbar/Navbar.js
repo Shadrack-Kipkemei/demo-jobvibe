@@ -3,6 +3,10 @@ import React from 'react';
 import styles from './Navbar.module.css';
 
 function Navbar({onLoginClick, onSignupClick}) {
+  const handleSignupClick = () => {
+    console.log("Sign Up button clicked")
+    onSignupClick()
+  }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -26,7 +30,7 @@ function Navbar({onLoginClick, onSignupClick}) {
 
           <div>
             <button className="btn btn-primary me-2" onClick={onLoginClick}>Login</button>
-            <button className="btn btn-secondary" onClick={onSignupClick}>Sign Up</button>
+            <button className="btn btn-secondary" onClick={handleSignupClick}>Sign Up</button>
           </div>
         </div>
       </div>

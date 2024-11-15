@@ -3,6 +3,7 @@ import LoginForm from "./components/LoginForm/LoginForm";
 import SignupForm from "./components/SignupForm/SignupForm";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -45,8 +46,8 @@ function App() {
         </div>
       )}
       {isSignupVisible && (
-        <div className="overlay">
-          <div className="modal">
+        <div className="login-overlay" style={{display: "block"}}>
+          <div className="login-modal">
             <button className="close-button" onClick={toggleSignupForm}>x</button>
             <SignupForm onSignup={handleSignup} />
           </div>

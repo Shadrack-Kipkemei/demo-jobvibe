@@ -1,24 +1,38 @@
+/* General styling
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
 .app {
-  text-align: center;
-  padding: 2rem;
-  /* background-image: url(../public/background.png); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 0.5rem;
+
+.app div {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
-
-.overlay {
+.login-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -28,14 +42,15 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
-.modal {
-  background: white;
+.login-modal {
+  background-color: white;
   padding: 2rem;
   border-radius: 8px;
-  max-width: 500px;
-  width: 100%;
+  width: 400px;
+  max-width: 90%;
   position: relative;
 }
 
@@ -46,7 +61,23 @@ button:hover {
   background: none;
   border: none;
   font-size: 1.5rem;
+  color: #333;
   cursor: pointer;
 }
 
+.close-button:hover {
+  color: #f00;
+}
 
+
+.login-overlay, .overlay {
+  display: none; 
+}
+
+.app .login-overlay, .app .overlay {
+  display: flex; 
+}
+
+
+
+ */
