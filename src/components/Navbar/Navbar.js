@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./Navbar.module.css"
+import styles from './Navbar.module.css';
 
 const Navbar = ({ onLoginClick, onSignupClick, onJobsClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,32 +9,29 @@ const Navbar = ({ onLoginClick, onSignupClick, onJobsClick }) => {
   };
 
   return (
-    <nav className="navbar">
-      <div className="logo">JobVibe</div>
-      <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-        <li><a href="#home">Home</a></li> 
-        <li><a href="#about">About</a></li> 
-        <li><a href="#contact">Contact</a></li> 
-        <li><a href="#jobs" onClick={onJobsClick}>Jobs</a></li>  {/* Add Jobs button */}
+    <nav className={styles.navbar}>
+      <div className={styles.logo}>JobVibe</div>
+      <ul className={`${styles.navlinks} ${isMenuOpen ? styles.open : ''}`}>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#jobs" onClick={onJobsClick}>Jobs</a></li>
         
-        
-        {/* Button to toggle Login Form */}
         <li>
-          <button className="login-btn" onClick={onLoginClick}>
+          <button className={styles.loginbtn} onClick={onLoginClick}>
             Login
           </button>
         </li>
 
-        {/* Button to toggle Sign Up Form */}
         <li>
-          <button className="signup-btn" onClick={onSignupClick}>
+          <button className={styles.signupbtn} onClick={onSignupClick}>
             Sign Up
           </button>
         </li>
       </ul>
 
       {/* Mobile menu toggle */}
-      <div className="menu-toggle" onClick={toggleMenu}>
+      <div className={styles.menutoggle} onClick={toggleMenu}>
         <span>&#9776;</span>
       </div>
     </nav>

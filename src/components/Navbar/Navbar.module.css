@@ -19,18 +19,20 @@
     font-weight: 600;
   }
   
-  .navbar .nav-links {
+  .navlinks {
     display: flex;
     gap: 30px;
     list-style: none;
+    
   }
   
-  .navbar .nav-links li {
+  .navbar .navlinks li {
     font-size: 1.1em;
+    
   }
   
-  .navbar .nav-links li a,
-  .navbar .nav-links li button {
+  .navbar .navlinks li a,
+  .navbar .navlinks li button {
     color: aqua;
     text-decoration: none;
     font-weight: 500;
@@ -40,12 +42,12 @@
     transition: color 0.3s ease;
   }
   
-  .navbar .nav-links li a:hover,
-  .navbar .nav-links li button:hover {
+  .navbar .navlinks li a:hover,
+  .navbar .navlinks li button:hover {
     color: #45B1E8;
   }
   
-  .navbar .menu-toggle {
+  .navbar .menutoggle {
     display: none;
     font-size: 2em;
     color: #fff;
@@ -55,7 +57,7 @@
   
   @media (max-width: 768px) {
 
-    .navbar .nav-links {
+    .navlinks {
       display: none;
       flex-direction: column;
       gap: 20px;
@@ -63,13 +65,27 @@
       align-items: center;
     }
   
-    .navbar .menu-toggle {
+    .navbar .menutoggle {
       display: block;
     }
   
-    .navbar.open .nav-links {
+    .navbar .navlinks.open {
       display: flex;
+    }
+
+    .navlinks li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .loginbtn, .signupbtn {
+        width: 100%;
+        text-align: center;
     }
   }
   
   
+
+
+
+
