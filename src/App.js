@@ -1,58 +1,93 @@
-import React, { useState } from "react";
-import LoginForm from "./components/LoginForm/LoginForm";
-import SignupForm from "./components/SignupForm/SignupForm";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import Contact from './components/Contact/Contact';
 import Navbar from "./components/Navbar/Navbar";
-import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import About from './components/About/About';
+import Home from './components/Home/Home';
+import SignupForm from './components/SignupForm/SignupForm';  
+import LoginForm from './components/LoginForm/LoginForm'; 
+import Jobs from './components/Jobs/Jobs';  
 
 function App() {
-  const [user, setUser] = useState(null);
-  const [isLoginVisible, setIsLoginVisible] = useState(false);
-  const [isSignupVisible, setIsSignupVisible] = useState(false);
+  const [showLoginForm, setShowLoginForm] = useState(false);
+  const [showSignupForm, setShowSignupForm] = useState(false);
+  const [loggedInUser, setLoggedInUser] = useState(null);
+  const [users, setUsers] = useState([]);  // Users data
+  const [jobs, setJobs] = useState([]);    // Jobs data
+  const [showJobs, setShowJobs] = useState(false);  // Manage Jobs section visibility
 
-  function handleLogin(loggedInUser) {
-    setUser(loggedInUser);
-    setIsLoginVisible(false); // Close the login form after login
-  }
+  // Fetch jobs and users data from an API or local storage
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const jobsResponse = await fetch('https://json-server-template-5ash.onrender.com/jobs');
+        const jobsData = await jobsResponse.json();
+        setJobs(jobsData);
 
-  function handleSignup(newUser) {
-    setUser(newUser);
-    setIsSignupVisible(false); // Close the signup form after signup
-  }
+        const usersResponse = await fetch('https://json-server-template-5ash.onrender.com/users');
+        const usersData = await usersResponse.json();
+        setUsers(usersData);
+      } catch (error) {
+        console.error("Error fetching jobs or users data:", error);
+      }
+    };
+    fetchData();
+  }, []);
 
-  function toggleLoginForm() {
-    setIsLoginVisible(!isLoginVisible);
-  }
+  const toggleLoginForm = () => {
+    setShowLoginForm(!showLoginForm);
+    setShowSignupForm(false); // Close signup form if login is toggled
+  };
 
-  function toggleSignupForm() {
-    console.log("Toggling signup form")
-    setIsSignupVisible(!isSignupVisible);
-  }
+  const toggleSignupForm = () => {
+    setShowSignupForm(!showSignupForm);
+    setShowLoginForm(false); // Close login form if signup is toggled
+  };
+
+  const handleLogin = (user) => {
+    setLoggedInUser(user);
+    setShowLoginForm(false);  // Close login form after successful login
+    console.log('User logged in:', user);
+  };
+
+  const handleSignup = (newUser) => {
+    setLoggedInUser(newUser); 
+    setShowSignupForm(false); // Close signup form after successful signup
+    console.log('New user signed up:', newUser);
+  };
+
+  const toggleJobs = () => {
+    setShowJobs(!showJobs);  // Toggle visibility of jobs section
+  };
 
   return (
-    <div className="app">
-      <Navbar onLoginClick={toggleLoginForm} onSignupClick={toggleSignupForm} />
-      {user ? (
-        <div>Welcome, {user.name}!</div>
-      ) : (
-        <div>{/* Empty div for spacing */}</div>
-      )}
-      {isLoginVisible && (
-        <div className="login-overlay">
-          <div className="login-modal">
-            <button className="close-button" onClick={toggleLoginForm}>x</button>
-            <LoginForm onLogin={handleLogin} />
-          </div>
-        </div>
-      )}
-      {isSignupVisible && (
-        <div className="login-overlay" style={{display: "block"}}>
-          <div className="login-modal">
-            <button className="close-button" onClick={toggleSignupForm}>x</button>
-            <SignupForm onSignup={handleSignup} />
-          </div>
-        </div>
-      )}
+    <div className="App">
+      <h1>Welcome to JobVibe</h1>
+      <Navbar 
+        onLoginClick={toggleLoginForm} 
+        onSignupClick={toggleSignupForm} 
+        onJobsClick={toggleJobs}  // Pass toggleJobs function to Navbar
+      />
+       <Home />
+       <About />
+      
+      {/* Conditionally render Login or Signup form */}
+      {showLoginForm && <LoginForm onLogin={handleLogin} />}
+      {showSignupForm && <SignupForm onSignup={handleSignup} />}
+      
+      {/* Conditionally render Jobs section */}
+      {showJobs && <Jobs 
+        loggedInUser={loggedInUser} 
+        users={users} 
+        jobs={jobs} 
+        setUsers={setUsers} 
+        setJobs={setJobs} 
+      />}
+      
+     
+     
+      
+      <Contact />
     </div>
   );
 }

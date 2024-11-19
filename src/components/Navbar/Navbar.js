@@ -1,41 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
+import "./Navbar.module.css"
 
-import styles from './Navbar.module.css';
+const Navbar = ({ onLoginClick, onSignupClick, onJobsClick }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-function Navbar({onLoginClick, onSignupClick}) {
-  const handleSignupClick = () => {
-    console.log("Sign Up button clicked")
-    onSignupClick()
-  }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">Navbar</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Features</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Pricing</a>
-            </li>
-           
-          </ul>
+    <nav className="navbar">
+      <div className="logo">JobVibe</div>
+      <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+        <li><a href="#home">Home</a></li> 
+        <li><a href="#about">About</a></li> 
+        <li><a href="#contact">Contact</a></li> 
+        <li><a href="#jobs" onClick={onJobsClick}>Jobs</a></li>  {/* Add Jobs button */}
+        
+        
+        {/* Button to toggle Login Form */}
+        <li>
+          <button className="login-btn" onClick={onLoginClick}>
+            Login
+          </button>
+        </li>
 
-          <div>
-            <button className="btn btn-primary me-2" onClick={onLoginClick}>Login</button>
-            <button className="btn btn-secondary" onClick={handleSignupClick}>Sign Up</button>
-          </div>
-        </div>
+        {/* Button to toggle Sign Up Form */}
+        <li>
+          <button className="signup-btn" onClick={onSignupClick}>
+            Sign Up
+          </button>
+        </li>
+      </ul>
+
+      {/* Mobile menu toggle */}
+      <div className="menu-toggle" onClick={toggleMenu}>
+        <span>&#9776;</span>
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

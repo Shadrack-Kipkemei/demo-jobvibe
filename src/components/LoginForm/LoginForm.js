@@ -1,6 +1,5 @@
-// src/components/LoginForm/LoginForm.js
 import React, { useState } from "react";
-import styles from './LoginForm.module.css'; // Import the CSS module
+import Styles from "./LoginForm.module.css";
 
 function LoginForm({ onLogin }) {
   const [email, setEmail] = useState("");
@@ -18,20 +17,21 @@ function LoginForm({ onLogin }) {
   function handleSubmit(event) {
     event.preventDefault();
 
+    // Log the input values for debugging
+    console.log("Logging in with:", { email, password });
+
     // Fetch users from the server
     fetch("https://json-server-template-5ash.onrender.com/users")
       .then((response) => response.json())
       .then((users) => {
-        // Find the user with the entered email and password
         const user = users.find(
           (user) => user.email === email && user.password === password
         );
 
         if (user) {
           // Call the onLogin callback with the user data
-          onLogin(user);
+          onLogin(user);  // Pass the logged-in user to the parent (App.js)
         } else {
-          // Set an error message if credentials are invalid
           setError("Invalid email or password");
         }
       })
@@ -42,9 +42,9 @@ function LoginForm({ onLogin }) {
   }
 
   return (
-    <form className={styles['login-form']} onSubmit={handleSubmit}>
+    <form className={Styles["login-form"]} onSubmit={handleSubmit}>
       <h2>Login</h2>
-      {error && <p className={styles.error}>{error}</p>}
+      {error && <p className={Styles.error}>{error}</p>}
       <input
         type="email"
         name="email"

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-fluid{
+    background: rgba(255, 255, 255, .1);
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 1700px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.head {
+  background-image: url('../../../public/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background fixed */
+  min-height: 100vh; /* Allow the container to grow beyond the viewport */
+  width: 100%;
+  font-family: "Urbanist", sans-serif;
+  position: relative;
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+#nav{
+    border-radius: 30px;
+    max-width: 200px;
+    background-color: aqua;
+}
+
+#btn{
+    border-radius: 30px;
+    color: aqua;
+    border: 1px solid aqua;
+}
+#btn:hover{
+background-color: aqua;
+color: black;
+}
+
+  
+  #bar {
+    padding: 20px;
+  }
+  
+  ul.list-group {
+    list-style: none;
+    padding: 0;
+    background-color: aqua;
+  }
+  
+  ul.list-group-item {
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  ul.list-group-item h5 {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  ul.list-group-item p {
+    margin: 5px 0;
+  }
+  .list-group-item{
+    background-color: aqua;
+    margin: 20px;
+    border: 1px solid black;
+  }
+  /* img{
+    height: 200px;
+  }
+  #job{
+    justify-self: center;
+  } */
+
+  .job-image {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .job-logo {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+  }

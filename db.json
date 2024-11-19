@@ -58,9 +58,87 @@
       }
     },
     {
-      "id": "e80d",
-      "name": "Dan Gatuku",
-      "email": "dangatuku@gmail.com",
+      "id": "30f6",
+      "name": "dan",
+      "email": "dan@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
+    },
+    {
+      "id": "0aa3",
+      "name": "Whale",
+      "email": "whale@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
+    },
+    {
+      "id": "db17",
+      "name": "Riggy G",
+      "email": "riggy@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
+    },
+    {
+      "id": "8aa5",
+      "name": "Jane Doe",
+      "email": "jandoe@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
+    },
+    {
+      "id": "5977",
+      "name": "Jeremy Mayunge",
+      "email": "jeremy@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
+    },
+    {
+      "id": "2911",
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
+    },
+    {
+      "id": "2dfb",
+      "name": "Emily",
+      "email": "emily@gmail.com",
       "password": "100bags",
       "profile": {
         "location": "",
@@ -80,8 +158,7 @@
       "jobsPosted": [
         1,
         2
-      ],
-      "imageUrl": "https://img.freepik.com/free-vector/illustration-business-people_53876-20742.jpg?t=st=1731500204~exp=1731503804~hmac=18089329b09567cad8dde6d2d000286cb3c9ad11b4c1ac9aab05b56246afa95d&w=826"
+      ]
     },
     {
       "id": "2",
@@ -90,8 +167,7 @@
       "industry": "Healthcare",
       "jobsPosted": [
         3
-      ],
-      "imageUrl": "https://media.istockphoto.com/id/1350347609/photo/businessman-touching-to-plus-sign-for-positive-sign-such-as-more-benefit-thinking-and-mindset.jpg?b=1&s=612x612&w=0&k=20&c=c9fawlLPQMaIIyDb9i1MtxAy4XR5R_Z3L844jMsmWSc="
+      ]
     },
     {
       "id": "3",
@@ -101,8 +177,7 @@
       "jobsPosted": [
         4,
         5
-      ],
-      "imageUrl": "https://media.istockphoto.com/id/1132054367/photo/business-man-working-in-office-and-icons-appearing.jpg?b=1&s=612x612&w=0&k=20&c=Gy9whLfMsfjc3JQGXW46lrXGgODXdWv9k0ZCS3CW22U="
+      ]
     },
     {
       "id": "4",
@@ -112,8 +187,7 @@
       "jobsPosted": [
         6,
         7
-      ],
-      "imageUrl": "https://images.pexels.com/photos/305833/pexels-photo-305833.jpeg?auto=compress&cs=tinysrgb&w=600"
+      ]
     },
     {
       "id": "5",
@@ -122,8 +196,7 @@
       "industry": "Data Analytics",
       "jobsPosted": [
         8
-      ],
-      "imageUrl": "https://media.istockphoto.com/id/1845616552/photo/b2b-business-to-business-company-technology-marketing-concept.jpg?b=1&s=612x612&w=0&k=20&c=JjUKECMNAlFQFBnmvSqnZrYnVPI6IQ68b_ejZ5BfRIs="
+      ]
     },
     {
       "id": "6",
@@ -132,8 +205,7 @@
       "industry": "Construction",
       "jobsPosted": [
         9
-      ],
-      "imageUrl": "https://media.istockphoto.com/id/1351472483/photo/house-project-in-virtual-reality.jpg?b=1&s=612x612&w=0&k=20&c=QYKmXALoqblkiyDiFd2KUKufB_PXQJnGvH6TkZNScqk="
+      ]
     },
     {
       "id": "7",
@@ -142,8 +214,7 @@
       "industry": "Finance",
       "jobsPosted": [
         10
-      ],
-      "imageUrl": "https://images.pexels.com/photos/9577249/pexels-photo-9577249.jpeg?auto=compress&cs=tinysrgb&w=600"
+      ]
     },
     {
       "id": "8",
@@ -152,8 +223,7 @@
       "industry": "Healthcare",
       "jobsPosted": [
         11
-      ],
-      "imageUrl": "https://media.istockphoto.com/id/679625414/photo/doctor-touching-screen-with-icons-futuristic-medicine-concept.jpg?b=1&s=612x612&w=0&k=20&c=Q64Ln5Mek3paPyBbRWdfiVDV96ANuVn8sQ1D-3Lfry4="
+      ]
     },
     {
       "id": "9",
@@ -162,8 +232,7 @@
       "industry": "Technology",
       "jobsPosted": [
         12
-      ],
-      "imageUrl": "https://images.pexels.com/photos/26510355/pexels-photo-26510355/free-photo-of-a-hardware-component.jpeg?auto=compress&cs=tinysrgb&w=600"
+      ]
     },
     {
       "id": "10",
@@ -172,8 +241,7 @@
       "industry": "Logistics",
       "jobsPosted": [
         13
-      ],
-      "imageUrl": "https://img.freepik.com/premium-photo/male-team-leader-working-laptop-talking-mobile-phone_625516-1659.jpg?w=1380"
+      ]
     },
     {
       "id": "11",
@@ -182,8 +250,7 @@
       "industry": "Travel",
       "jobsPosted": [
         14
-      ],
-      "imageUrl": "https://media.istockphoto.com/id/641398360/photo/map-of-flight-routes-airplanes-network.jpg?b=1&s=612x612&w=0&k=20&c=OUdj_1ol-BJTmmUgSGhu8nLvJIY1H-I2KA7x2W0K-cA="
+      ]
     }
   ],
   "jobs": [
@@ -204,7 +271,8 @@
       "postedDate": "2024-11-01",
       "applications": [
         1
-      ]
+      ],
+      "imageUrl": "https://img.freepik.com/free-vector/portrait-programmer-working-with-pc_23-2148216736.jpg?t=st=1731594955~exp=1731598555~hmac=ce072a328703cb043c8382a388b9c16f41e34ac1342e99b5d27d31d8084b11c6&w=740"
     },
     {
       "id": "2",
@@ -222,7 +290,8 @@
       "postedDate": "2024-11-05",
       "applications": [
         2
-      ]
+      ],
+      "imageUrl": "https://img.freepik.com/free-vector/organic-flat-computer-programming-illustration_23-2148955255.jpg?t=st=1731595076~exp=1731598676~hmac=d888988b19c9b84100a3b066775cd91eb484cba1d1f6a21abc14178158ab8d73&w=740"
     },
     {
       "id": "3",
@@ -240,7 +309,8 @@
       "postedDate": "2024-11-10",
       "applications": [
         3
-      ]
+      ],
+      "imageUrl": "https://img.freepik.com/free-vector/data-processing-concept-illustration_114360-4760.jpg?t=st=1731595197~exp=1731598797~hmac=07c452987cc4269f1f24c9df53953d985684ee9799a1e8d63d09aa2ddbe98069&w=740"
     },
     {
       "id": "4",
@@ -257,7 +327,8 @@
       ],
       "salary": "$75,000 - $95,000",
       "postedDate": "2024-11-03",
-      "applications": []
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/code-typing-concept-illustration_114360-3581.jpg?t=st=1731595417~exp=1731599017~hmac=60304e163e4b141df7972528fae06b67fef7f5a253e6ae2c7a664159e5a22f35&w=740"
     },
     {
       "id": "5",
@@ -273,7 +344,8 @@
       ],
       "salary": "$85,000 - $105,000",
       "postedDate": "2024-11-07",
-      "applications": []
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/pair-programming-concept-illustration_114360-2170.jpg?t=st=1731595546~exp=1731599146~hmac=f2f85edb5f9cf2f0ac5dcb8fae5905add998a9bf07675704a37fadb3987bb09e&w=740"
     },
     {
       "id": "6",
@@ -289,7 +361,8 @@
       ],
       "salary": "$95,000 - $115,000",
       "postedDate": "2024-11-09",
-      "applications": []
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/characters-people-holding-green-energy-icons_53876-59870.jpg?t=st=1731595615~exp=1731599215~hmac=fc59618e1eb0da12b77f554b65d5c6d4b5b83c87dd54f38f8dc711332e6e3951&w=740"
     },
     {
       "id": "7",
@@ -305,7 +378,8 @@
       ],
       "salary": "$90,000 - $110,000",
       "postedDate": "2024-11-11",
-      "applications": []
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/save-world-design-flat-style_24877-60056.jpg?t=st=1731595680~exp=1731599280~hmac=d48fef18f8da91075be800c7f45bb49d5d2d094d1e03ca6dacb618baaceeb84c&w=740"
     },
     {
       "id": "8",
@@ -321,7 +395,8 @@
       ],
       "salary": "$70,000 - $90,000",
       "postedDate": "2024-11-12",
-      "applications": []
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/dashboard-analytics-computer-performance-evaluation-chart-screen-statistics-analysis-infographic-assessment-business-report-display-vector-isolated-concept-metaphor-illustration_335657-1990.jpg?t=st=1731595742~exp=1731599342~hmac=8b842b2214f6fc8ad38933941c63ed9de0c0b10ae78b54858427fa1524a7be82&w=740"
     },
     {
       "id": "9",
@@ -337,7 +412,8 @@
       ],
       "salary": "$75,000 - $95,000",
       "postedDate": "2024-11-14",
-      "applications": []
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-photo/african-american-worker-standing-uniform-wearing-safety-hat-factory_1303-30606.jpg?t=st=1731595971~exp=1731599571~hmac=a564b83b7b7364d2d300218da8e732a7c75197603a99fcc13d6289d92472a5d8&w=740"
     },
     {
       "id": "10",
@@ -353,7 +429,8 @@
       ],
       "salary": "$80,000 - $100,000",
       "postedDate": "2024-11-15",
-      "applications": []
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/flat-design-stock-market-concept_23-2149154577.jpg?t=st=1731596066~exp=1731599666~hmac=25a3195872ae3c8ba0b5d015c0eed18455f8289457ea9b9aa67d146196ad2a02&w=740"
     },
     {
       "id": "11",
@@ -369,7 +446,8 @@
       ],
       "salary": "$85,000 - $105,000",
       "postedDate": "2024-11-16",
-      "applications": []
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-photo/doctor-working-with-laptop-front-view_23-2149941453.jpg?t=st=1731596524~exp=1731600124~hmac=9cafe1b1c323a844f1afec791a47dd2f37780cebf12764bba44f1768aa5e410d&w=740"
     },
     {
       "id": "12",
@@ -385,7 +463,8 @@
       ],
       "salary": "$95,000 - $115,000",
       "postedDate": "2024-11-17",
-      "applications": []
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/industry-4-0-concept-illustration_114360-25336.jpg?t=st=1731596683~exp=1731600283~hmac=7a408664f28fe507e929755e66524b5e96e0dd676309d4dcd395ba16a5f56a35&w=740"
     },
     {
       "id": "13",
@@ -401,7 +480,8 @@
       ],
       "salary": "$80,000 - $100,000",
       "postedDate": "2024-11-18",
-      "applications": []
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-photo/medium-shot-smiley-man-with-helmet_23-2149426498.jpg?t=st=1731596773~exp=1731600373~hmac=9782530748accae0fd136da701a3e938985804cda8e3318fae5ffaa1e2cfbb8b&w=740"
     },
     {
       "id": "14",
@@ -417,7 +497,8 @@
       ],
       "salary": "$60,000 - $80,000",
       "postedDate": "2024-11-19",
-      "applications": []
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-photo/travel-agent-offering-trip-planning-clients_23-2149079444.jpg?t=st=1731596912~exp=1731600512~hmac=3b7259fff984d9bb9916ced2c40a08f01424110bed8243a58e5e3fbbe4734049&w=740"
     }
   ],
   "applications": [
@@ -441,6 +522,48 @@
       "jobId": 3,
       "status": "applied",
       "appliedDate": "2024-11-12"
+    },
+    {
+      "id": "df05",
+      "userId": "1",
+      "jobId": "1",
+      "status": "applied",
+      "appliedDate": "2024-11-14T22:35:10.744Z"
+    },
+    {
+      "id": "418c",
+      "userId": "8aa5",
+      "jobId": "2",
+      "status": "applied",
+      "appliedDate": "2024-11-14T22:37:21.282Z"
+    },
+    {
+      "id": "afeb",
+      "userId": "5977",
+      "jobId": "3",
+      "status": "applied",
+      "appliedDate": "2024-11-14T22:41:45.555Z"
+    },
+    {
+      "id": "32ad",
+      "userId": "1",
+      "jobId": "1",
+      "status": "applied",
+      "appliedDate": "2024-11-14T23:31:59.621Z"
+    },
+    {
+      "id": "4b69",
+      "userId": "1",
+      "jobId": "1",
+      "status": "applied",
+      "appliedDate": "2024-11-14T23:41:33.447Z"
+    },
+    {
+      "id": "f0e3",
+      "userId": "1",
+      "jobId": "1",
+      "status": "applied",
+      "appliedDate": "2024-11-14T23:46:30.695Z"
     }
   ]
 }

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+.home {
+  padding: 60px 20px;
+  text-align: center;
+ background-image: url(../../../public/background.png);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ height: 100vh;
+  color: aqua;
+  font-family: "Urbanist", sans-serif;
+  min-height: 100vh; 
+}
+
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.home p {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.home .cta-button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: aqua;
+  color: aqua;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home .cta-button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .home h1 {
+    font-size: 2.5rem;
+  }
+
+  .home p {
+    font-size: 1.2rem;
+  }
+
+  .home .cta-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+
+}
+
+img {
+  border-radius: 30px;
+  border: 2px solid aqua;
+}

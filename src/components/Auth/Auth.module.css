@@ -1,0 +1,93 @@
+/* src/components/Auth.module.css */
+
+/* Main container for authentication */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    min-height: 100vh;
+    background-image: url(../../../public/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    color: aqua;
+  }
+  
+  /* Styling for the message after successful login/signup */
+  #message {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  /* Buttons to toggle between login/signup */
+  button {
+    padding: 12px 20px;
+    margin: 10px;
+    background-color: aqua;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 200px;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #45B1E8;
+    transform: scale(1.05);
+  }
+  
+  /* Buttons disabled state */
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Styles for the modal-like form container */
+  .form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  /* Inner modal form container */
+  .form-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+  }
+  
+  /* Close button styling for the modal */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* Close button hover effect */
+  .close-button:hover {
+    color: #d9534f;
+  }
+  
