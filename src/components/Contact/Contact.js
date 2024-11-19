@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./Contact.module.css"
+import styles from "./Contact.module.css"
 
 const Contact = () => {
   // State for form inputs
@@ -36,10 +36,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className={styles.contact}>
       <h2>Contact Us</h2>
 
-      <form className="contact-form" onSubmit={handleSubmit}>
+      <form className={styles.contactform} onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
@@ -66,7 +66,7 @@ const Contact = () => {
         <button type="submit">Send Message</button>
       </form>
 
-      {status && <p className="status-message">{status}</p>}
+      {status && <p className={styles.statusmessage}>{status}</p>}
 
       <h6>Find us on email: <a href="mailto:JobVibe@gmail.com">JobVibe@gmail.com</a></h6>
       <h6>Phone number: <a href="tel:+254712456789">0712 456 789</a> or <a href="tel:+25412234900">012 234 900</a></h6>

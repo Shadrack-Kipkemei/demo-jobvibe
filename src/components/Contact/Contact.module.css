@@ -28,7 +28,7 @@
 }
 
 /* Contact Form Styles */
-.contact-form {
+.contactform {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -37,8 +37,8 @@
 }
 
 /* Input Fields */
-.contact-form input,
-.contact-form textarea {
+.contactform input,
+.contactform textarea {
   padding: 12px;
   font-size: 1rem;
   border: 1px solid #ddd;
@@ -47,14 +47,14 @@
   transition: border 0.3s ease;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
+.contactform input:focus,
+.contactform textarea:focus {
   border-color: #4CAF50;
   outline: none;
 }
 
 /* Button Styles */
-.contact-form button {
+.contactform button {
   background-color: aqua;
   color: black;
   padding: 12px 20px;
@@ -65,26 +65,26 @@
   transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
+.contactform button:hover {
   background-color: #45B1E8;
 }
 
-.contact-form button:focus {
+.contactform button:focus {
   outline: none;
 }
 
 /* Status Message */
-.status-message {
+.statusmessage {
   margin-top: 20px;
   font-size: 1rem;
   color: #555;
 }
 
-.status-message.success {
+.statusmessage.success {
   color: aqua;
 }
 
-.status-message.error {
+.statusmessage.error {
   color: #d9534f;
 }
 
@@ -124,11 +124,11 @@
     font-size: 2rem;
   }
 
-  .contact-form {
+  .contactform {
     gap: 15px;
   }
 
-  .contact-form button {
+  .contactform button {
     font-size: 1rem;
     padding: 10px 20px;
   }

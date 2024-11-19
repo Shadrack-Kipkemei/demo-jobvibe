@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "./Jobs.module.css"
+import styles from "./Jobs.module.css"
 
 const Jobs = ({ loggedInUser, users, jobs, setUsers, setJobs }) => {
   const [filteredJobs, setFilteredJobs] = useState(jobs);  // Set the filtered jobs
@@ -99,7 +99,7 @@ const Jobs = ({ loggedInUser, users, jobs, setUsers, setJobs }) => {
   };
 
   return (
-    <header className="head" id="jobs">
+    <header className="styles.head" id="jobs">
       <div id="bar">
         <div className="container-fluid">
           <form className="d-flex">
