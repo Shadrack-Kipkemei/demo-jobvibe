@@ -26,6 +26,11 @@
   line-height: 1.5;
 }
 
+.home img {
+  border-radius: 30px;
+  border: 2px solid aqua;
+}
+
 .home .cta-button {
   margin-top: 30px;
   padding: 15px 30px;
