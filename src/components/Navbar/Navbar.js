@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
+import {Link} from "react-router-dom";
 
-const Navbar = ({ onLoginClick, onSignupClick, onJobsClick }) => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -12,21 +13,21 @@ const Navbar = ({ onLoginClick, onSignupClick, onJobsClick }) => {
     <nav className={styles.navbar}>
       <div className={styles.logo}>JobVibe</div>
       <ul className={`${styles.navlinks} ${isMenuOpen ? styles.open : ''}`}>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#jobs" onClick={onJobsClick}>Jobs</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/jobs">Jobs</Link></li>
         
         <li>
-          <button className={styles.loginbtn} onClick={onLoginClick}>
-            Login
-          </button>
+          <Link to="/login">
+          <button className={styles.loginbtn}>Login</button>
+          </Link>
         </li>
 
         <li>
-          <button className={styles.signupbtn} onClick={onSignupClick}>
-            Sign Up
-          </button>
+        <Link to="/signup">
+          <button className={styles.signupbtn}>Sign Up</button>
+          </Link>
         </li>
       </ul>
 

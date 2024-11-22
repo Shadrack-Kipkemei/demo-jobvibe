@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import Contact from './components/Contact/Contact';
 import Navbar from "./components/Navbar/Navbar";
 import About from './components/About/About';
@@ -9,12 +10,12 @@ import LoginForm from './components/LoginForm/LoginForm';
 import Jobs from './components/Jobs/Jobs';  
 
 function App() {
-  const [showLoginForm, setShowLoginForm] = useState(false);
-  const [showSignupForm, setShowSignupForm] = useState(false);
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [users, setUsers] = useState([]);  // Users data
   const [jobs, setJobs] = useState([]);    // Jobs data
-  const [showJobs, setShowJobs] = useState(false);  // Manage Jobs section visibility
+  
+  const navigate = useNavigate(); // Hook to navigate programmatically
+
 
   // Fetch jobs and users data from an API or local storage
   useEffect(() => {
@@ -34,61 +35,57 @@ function App() {
     fetchData();
   }, []);
 
-  const toggleLoginForm = () => {
-    setShowLoginForm(!showLoginForm);
-    setShowSignupForm(false); // Close signup form if login is toggled
-  };
-
-  const toggleSignupForm = () => {
-    setShowSignupForm(!showSignupForm);
-    setShowLoginForm(false); // Close login form if signup is toggled
-  };
 
   const handleLogin = (user) => {
     setLoggedInUser(user);
-    setShowLoginForm(false);  // Close login form after successful login
     console.log('User logged in:', user);
+    navigate("/jobs"); // redirect to jobs page after successful login
   };
 
   const handleSignup = (newUser) => {
     setLoggedInUser(newUser); 
-    setShowSignupForm(false); // Close signup form after successful signup
     console.log('New user signed up:', newUser);
+    navigate("/"); // Redirect to home page after successful signup
   };
 
-  const toggleJobs = () => {
-    setShowJobs(!showJobs);  // Toggle visibility of jobs section
-  };
+
 
   return (
+    
     <div className="App">
       <h1>Welcome to JobVibe</h1>
-      <Navbar 
-        onLoginClick={toggleLoginForm} 
-        onSignupClick={toggleSignupForm} 
-        onJobsClick={toggleJobs}  // Pass toggleJobs function to Navbar
+      <Navbar/>
+
+      <Routes>
+       <Route path="/" element={<Home/>} />
+       <Route path="/about" element={<About/>} />
+       <Route path="/contact" element={<Contact/>} />
+      
+      {/* Add route for SignupForm */}
+      <Route 
+      path="/signup"
+      element={<SignupForm onSignup={handleSignup}/>}
       />
-       <Home />
-       <About />
-      
-      {/* Conditionally render Login or Signup form */}
-      {showLoginForm && <LoginForm onLogin={handleLogin} />}
-      {showSignupForm && <SignupForm onSignup={handleSignup} />}
-      
-      {/* Conditionally render Jobs section */}
-      {showJobs && <Jobs 
-        loggedInUser={loggedInUser} 
-        users={users} 
-        jobs={jobs} 
-        setUsers={setUsers} 
-        setJobs={setJobs} 
-      />}
+
+      {/* Add route for LoginForm */}
+      <Route 
+      path='/login'
+      element={<LoginForm onLogin={handleLogin}/>}
+      />
+
+      {/* Add route for jobs */}
+      <Route 
+      path='/jobs'
+      element={<Jobs loggedInUser={loggedInUser} users={users} jobs={jobs} />}
+      />
+      </Routes>
       
      
      
       
-      <Contact />
+     
     </div>
+    
   );
 }
 
